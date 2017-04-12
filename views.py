@@ -7,6 +7,11 @@ def index(request):
     context = {'all_albums': all_albums}
     return render(request, 'music/index.html', context)
 
+def index(request):
+    all_albums = Album.objects.all()
+    context = {'all_albums': all_albums}
+    return render(request, 'sing/text.html', context)
+
 
 
 def detail(request, album_id):
